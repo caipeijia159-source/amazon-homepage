@@ -1,0 +1,6 @@
+/* Universal reset: clear default inner and outer margins on all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* /Universal reset */
