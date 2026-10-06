@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,121 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Page content is built block by block, top to bottom -->
+
+    <!-- ===== Block 1: Top navigation bar - full-width dark strip with logo, address, account and cart ===== -->
+    <div class="top-nav">
+      <div class="top-nav-inner clearfix">
+        <div class="logo">amazon</div>
+        <div class="nav-item">Deliver to Hong Kong</div>
+        <div class="nav-item">Hello, sign in</div>
+        <div class="nav-item">Returns &amp; Orders</div>
+        <div class="nav-item">Cart</div>
+      </div>
+    </div>
+    <!-- ===== /Block 1: Top navigation bar ===== -->
+
+
+    <!-- ===== Block 2: Sub navigation bar - full-width dark-blue strip with category shortcuts ===== -->
+    <div class="sub-nav">
+      <div class="sub-nav-inner">
+        <div class="sub-item">☰ All</div>
+        <div class="sub-item">Today's Deals</div>
+        <div class="sub-item">Customer Service</div>
+        <div class="sub-item">Registry</div>
+        <div class="sub-item">Gift Cards</div>
+      </div>
+    </div>
+    <!-- ===== /Block 2: Sub navigation bar ===== -->
+
+
+    <!-- ===== Block 3: Hero banner - full-width image directly below navigation ===== -->
+    <div class="banner">
+      <img src="img/banner.jpg" alt="Amazon hero banner" />
+    </div>
+    <!-- ===== /Block 3: Hero banner ===== -->
+
+
+    <!-- ===== Block 4: Product cards - fixed-width 1200px centered row of 4 cards, floated horizontally ===== -->
+    <div class="cards-wrap">
+
+      <!-- Card 1: Gaming accessories -->
+      <div class="card">
+        <h3 class="card-title">Gaming accessories</h3>
+        <img src="img/card1.jpg" alt="Gaming accessories" class="card-img" />
+        <a href="#" class="card-link">Shop now</a>
+      </div>
+
+      <!-- Card 2: Fashion trends -->
+      <div class="card">
+        <h3 class="card-title">Fashion trends</h3>
+        <img src="img/card2.jpg" alt="Fashion trends" class="card-img" />
+        <a href="#" class="card-link">Shop now</a>
+      </div>
+
+      <!-- Card 3: Home essentials -->
+      <div class="card">
+        <h3 class="card-title">Home essentials</h3>
+        <img src="img/card3.jpg" alt="Home essentials" class="card-img" />
+        <a href="#" class="card-link">Shop now</a>
+      </div>
+
+      <!-- Card 4: Books and Kindle - card-last removes right margin so 4 cards fit exactly in 1200px -->
+      <div class="card card-last">
+        <h3 class="card-title">Books &amp; Kindle</h3>
+        <img src="img/card4.jpg" alt="Books and Kindle" class="card-img" />
+        <a href="#" class="card-link">Shop now</a>
+      </div>
+
+      <!-- Extra-tag clear method: this empty div clears the floats and stretches the parent height -->
+      <div class="clear"></div>
+
+    </div>
+    <!-- ===== /Block 4: Product cards ===== -->
+
+
+    <!-- ===== Block 5: Footer - full-width dark strip with 4 columns of links, floated horizontally ===== -->
+    <div class="footer">
+      <div class="footer-inner clearfix">
+
+        <!-- Footer column 1: Get to Know Us -->
+        <div class="footer-col">
+          <h4>Get to Know Us</h4>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+          <a href="#">About Amazon</a>
+          <a href="#">Sustainability</a>
+        </div>
+
+        <!-- Footer column 2: Make Money with Us -->
+        <div class="footer-col">
+          <h4>Make Money with Us</h4>
+          <a href="#">Sell products</a>
+          <a href="#">Become an Affiliate</a>
+          <a href="#">Advertise Your Products</a>
+          <a href="#">Self-Publish with Us</a>
+        </div>
+
+        <!-- Footer column 3: Amazon Payment Products -->
+        <div class="footer-col">
+          <h4>Amazon Payment</h4>
+          <a href="#">Amazon and COVID-19</a>
+          <a href="#">Your Account</a>
+          <a href="#">Your Orders</a>
+          <a href="#">Shipping Rates</a>
+        </div>
+
+        <!-- Footer column 4: Let Us Help You - footer-col-last removes the right margin -->
+        <div class="footer-col footer-col-last">
+          <h4>Let Us Help You</h4>
+          <a href="#">Shipping Rates</a>
+          <a href="#">Returns &amp; Replacements</a>
+          <a href="#">Help</a>
+          <a href="#">Contact Us</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== /Block 5: Footer ===== -->
+
   </body>
 </html>

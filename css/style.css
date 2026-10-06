@@ -1,6 +1,224 @@
-/* Universal reset: clear default inner and outer margins on all elements */
+/* ============================================================
+   Universal reset: clear default inner and outer margins
+   ============================================================ */
 * {
   margin: 0;
   padding: 0;
 }
 /* /Universal reset */
+
+
+/* ============================================================
+   Clearfix: double pseudo-element method to clear floats
+   ============================================================ */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+}
+.clearfix::after {
+  clear: both;
+}
+/* /Clearfix */
+
+
+/* ============================================================
+   Block 1: Top navigation bar
+   ============================================================ */
+
+/* Top nav: full-width dark background strip */
+.top-nav {
+  width: 100%;
+  height: 60px;
+  background-color: #131921;
+}
+
+/* Top nav inner: fixed-width centered container for nav content */
+.top-nav-inner {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto; /* horizontal centering */
+}
+
+/* Top nav items: logo and links floated left so they form one horizontal row */
+.top-nav .logo,
+.top-nav .nav-item {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 15px;
+  color: #ffffff;
+  font-size: 14px;
+}
+/* /Block 1: Top navigation bar */
+
+
+/* ============================================================
+   Block 2: Sub navigation bar
+   ============================================================ */
+
+/* Sub nav: full-width dark-blue background strip */
+.sub-nav {
+  width: 100%;
+  height: 39px;
+  background-color: #232f3e;
+}
+
+/* Sub nav inner: fixed-width centered container;
+   clears floated children via overflow: hidden (clear method #2) */
+.sub-nav-inner {
+  width: 1200px;
+  height: 39px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Sub nav items: floated left so category shortcuts form one horizontal row */
+.sub-item {
+  float: left;
+  padding: 0 10px;
+  line-height: 39px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+/* Sub nav item hover: show a thin white border as highlight */
+.sub-item:hover {
+  border: 1px solid #ffffff;
+}
+/* /Block 2: Sub navigation bar */
+
+
+/* ============================================================
+   Block 3: Hero banner
+   ============================================================ */
+
+/* Banner container: full-width block that sits in normal flow */
+.banner {
+  width: 100%;
+  height: 400px;
+  background-color: #cccccc; /* fallback gray shown when image is not loaded */
+}
+
+/* Banner image: stretch to fill the container width */
+.banner img {
+  width: 100%;
+  height: 400px;
+}
+/* /Block 3: Hero banner */
+
+
+/* ============================================================
+   Block 4: Product cards
+   ============================================================ */
+
+/* Cards wrapper: fixed-width 1200px, centered with margin: 0 auto */
+.cards-wrap {
+  width: 1200px;
+  margin: 20px auto 0;
+}
+
+/* Single card: floated left so 4 cards sit in one horizontal row.
+   Width 245 + padding 20+20 + margin-right 20 = 305px per card.
+   4 x 305 - 20 (last margin removed) = 1200px exactly. */
+.card {
+  float: left;
+  width: 245px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Last card: remove right margin so the row totals exactly 1200px */
+.card-last {
+  margin-right: 0;
+}
+
+/* Card title: bold heading above the image */
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0f1111;
+}
+
+/* Card image: fill the card content width */
+.card-img {
+  width: 100%;
+  height: 200px;
+  background-color: #eeeeee; /* fallback gray when image is not loaded */
+}
+
+/* Card link: small blue link at the bottom of each card */
+.card-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #007185;
+  text-decoration: none;
+}
+
+/* Card link hover: darken and underline */
+.card-link:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+/* Extra-tag clear method: this empty block clears the floated cards
+   and gives .cards-wrap a real height (clear method #3) */
+.clear {
+  clear: both;
+}
+/* /Block 4: Product cards */
+/* ============================================================
+   Block 5: Footer
+   ============================================================ */
+
+/* Footer outer: full-width dark background strip */
+.footer {
+  width: 100%;
+  margin-top: 30px;
+  padding: 40px 0;
+  background-color: #232f3e;
+}
+
+/* Footer inner: fixed-width centered container;
+   clears floated columns via .clearfix (clear method reused from top nav) */
+.footer-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer column: floated left so 4 columns form one horizontal row.
+   4 x 280 width + 3 x 20 gap = 1180px, fits inside 1200px parent. */
+.footer-col {
+  float: left;
+  width: 280px;
+  margin-right: 20px;
+}
+
+/* Last footer column: remove right margin so total width fits inside parent */
+.footer-col-last {
+  margin-right: 0;
+}
+
+/* Footer column heading: white title above each group of links */
+.footer-col h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* Footer links: display block so each link occupies its own vertical line */
+.footer-col a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+/* Footer link hover: underline to show interactivity */
+.footer-col a:hover {
+  text-decoration: underline;
+}
+/* /Block 5: Footer */
