@@ -102,11 +102,11 @@
   background-color: #cccccc;
 }
 
-/* Banner image: fill width and shift up so the sofa area (middle of the photo)
-   is what shows inside the 600px-tall banner container */
+/* Banner image: fill width of the fixed-height banner container;
+   a small negative margin shifts the image up so the room's center is visible */
 .banner img {
   width: 100%;
-  margin-top: -1000px;
+  margin-top: -200px;
 }
 
 
